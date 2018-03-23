@@ -1,0 +1,17 @@
+{
+  "name": "nodejs-intro-demo",
+  "version": "1.0.0",
+  "description": "Demo project for the Introduction to Node.js presentation",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Roch Devost",
+  "license": "ISC",
+  "private": true,
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.3",
+    "nedb": "^1.8.0"
+  }
+}
