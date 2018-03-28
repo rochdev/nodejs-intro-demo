@@ -21,6 +21,14 @@ router.put('/docs/:id', (req, res, next) => {
   })
 })
 
+// Remove document by ID
+router.delete('/docs/:id', (req, res, next) => {
+  docs.remove({ _id: req.params.id }, {}, (err) => {
+    if (err) return next(err)
+    res.status(200).send()
+  })
+})
+
 // Get document by ID
 router.get('/docs/:id', (req, res, next) => {
   docs.findOne({ _id: req.params.id }, (err, doc) => {
