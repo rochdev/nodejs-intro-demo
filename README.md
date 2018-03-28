@@ -14,8 +14,8 @@ npm start
 ### Insert documents
 
 ```sh
-curl -H 'Content-Type: application/json' -X PUT -d '{"name":"alice"}' http://localhost:8080/docs
-curl -H 'Content-Type: application/json' -X PUT -d '{"name":"bob"}' http://localhost:8080/docs
+curl -H 'Content-Type: application/json' -X POST -d '{"name":"alice"}' http://localhost:8080/docs
+curl -H 'Content-Type: application/json' -X POST -d '{"name":"bob"}' http://localhost:8080/docs
 ```
 
 ### Find documents

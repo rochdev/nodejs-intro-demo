@@ -6,7 +6,7 @@ const docs = require('./docs')
 const router = express.Router()
 
 // Insert documents
-router.put('/docs', (req, res, next) => {
+router.post('/docs', (req, res, next) => {
   docs.insert(req.body, (err) => {
     if (err) return next(err)
     res.status(200).send()
@@ -14,7 +14,7 @@ router.put('/docs', (req, res, next) => {
 })
 
 // Update document by ID
-router.post('/docs/:id', (req, res, next) => {
+router.put('/docs/:id', (req, res, next) => {
   docs.update({ _id: req.params.id }, req.body, {}, (err) => {
     if (err) return next(err)
     res.status(200).send()
